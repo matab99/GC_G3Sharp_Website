@@ -1,15 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-screenshots',
+  selector: 'gc-screenshots',
   templateUrl: './screenshots.component.html',
   styleUrls: ['./screenshots.component.scss']
 })
-export class ScreenshotsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class ScreenshotsComponent {}
