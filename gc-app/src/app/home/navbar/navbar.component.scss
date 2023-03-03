@@ -1,0 +1,8 @@
+.navbar {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba($color: #111111, $alpha: 0.75);
+    box-shadow: 0 0.25rem 0.5rem 0 rgba($color: #000000, $alpha: 0.35);
+}

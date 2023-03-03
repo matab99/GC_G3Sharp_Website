@@ -1,0 +1,86 @@
+$banner-title-font-family: 'Grind', Arial, Helvetica, sans-serif;
+$banner-title-font-size: 8vh;
+$banner-title-font-weight: 500;
+$banner-title-font-color-top: #ffffff;
+$banner-title-font-color-bottom: #b4b6d2;
+$banner-title-offset-top: 40%;
+$banner-title-offset-right: $banner-title-font-size;
+$banner-title-animation-time: 5s;
+$banner-title-animation-offset: 5%;
+
+$banner-download-font-family: 'Zekton', Arial, Helvetica, sans-serif;
+$banner-download-font-color: #ffffff;
+$banner-download-font-weight: 600;
+$banner-download-font-size: 4vh;
+$banner-download-padding: 2vh 4vh;
+$banner-download-background: rgba($color: #111111, $alpha: 0.75);
+$banner-download-background-hover: rgba($color: #111111, $alpha: 0.9);
+$banner-download-border: 0.2rem solid rgba($color: #000000, $alpha: 0.25);
+$banner-download-transition: background-color 0.25s;
+$banner-download-clip-path: polygon(calc(100% - 2vh) 0, 100% 2vh, 100% 100%, 2vh 100%, 0 calc(100% - 2vh), 0 0);
+
+.banner {
+    position: relative;
+    display: block;
+    height: 100vh;
+    box-shadow: 1vw -2vw 2vw black inset, -1vw 2vw 2vw black inset;
+    background-image: url('/assets/img/banner_bg4.png');
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+
+    &__title {
+        position: absolute;
+        margin: 0;
+        font-size: $banner-title-font-size;
+        font-weight: $banner-title-font-weight;
+        animation: title-animation ease-in-out $banner-title-animation-time infinite;
+
+        &-top {
+            right: $banner-title-font-size;
+            color: $banner-title-font-color-top;
+            top: $banner-title-offset-top;
+        }
+
+        &-bottom {
+            color: $banner-title-font-color-bottom;
+            right: $banner-title-font-size;
+            top: calc(#{$banner-title-offset-top} + 1.25 * #{$banner-title-font-size});
+            animation-delay: calc(-#{$banner-title-animation-time} / 10);
+        }
+
+        @keyframes title-animation {
+            0% {
+                transform: translateY(calc(-#{$banner-title-animation-offset}));
+            }
+            50% {
+                transform: translateY(calc(+#{$banner-title-animation-offset}));
+            }
+            100% {
+                transform: translateY(calc(-#{$banner-title-animation-offset}));
+            }
+        }
+    }
+
+    &__download {
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 25%;
+        transform: translateX(-50%) translateY(+50%);
+        border: 0;
+        cursor: pointer;
+
+        padding: $banner-download-padding;
+        font-size: $banner-download-font-size;
+        font-weight: $banner-download-font-weight;
+        color: $banner-download-font-color;
+        background-color: $banner-download-background;
+        transition: $banner-download-transition;
+        clip-path: $banner-download-clip-path;
+
+        &:hover {
+            background-color: $banner-download-background-hover;
+        }
+    }
+}
