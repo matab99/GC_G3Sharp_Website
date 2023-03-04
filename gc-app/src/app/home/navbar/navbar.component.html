@@ -1,3 +1,28 @@
-<div class="navbar">
-    <p>dsdsdssds</p>
+<div class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#banner">
+      <h2 class="navbar-brand__title navbar-brand__title--top">Garbage</h2>
+      <h2 class="navbar-brand__title navbar-brand__title--bottom">Collector</h2>
+    </a>
+    <button class="navbar-toggler" (click)="collapseToggler.toggle()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      mdbCollapse
+      #collapseToggler="mdbCollapse"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Opis gry</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#screenshots">Zrzuty ekranu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#authors">O nas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

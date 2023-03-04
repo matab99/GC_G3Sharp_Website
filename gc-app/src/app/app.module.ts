@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +10,7 @@ import { NavbarComponent } from './home/navbar/navbar.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { ScreenshotsComponent } from './home/screenshots/screenshots.component';
 import { FeaturesComponent } from './home/features/features.component';
-import { DescriptionComponent } from './home/description/description.component';
+import { AuthorsComponent } from './home/authors/authors.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,12 @@ import { DescriptionComponent } from './home/description/description.component';
     FooterComponent,
     ScreenshotsComponent,
     FeaturesComponent,
-    DescriptionComponent
+    AuthorsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MdbCollapseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
