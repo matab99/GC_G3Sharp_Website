@@ -5,21 +5,23 @@ $authors-title-color: #ffffff;
 $authors-title-background-color: #111111;
 $authors-title-box-shadow: inset 0 0 2rem 1rem #000000;
 $authors-title-font-size: 2rem;
-$authors-title-margin: 2rem 0;
+$authors-title-margin: 0;
 $authors-title-padding: 2rem;
 $authors-title-border-radius: 1rem;
 
 $technology-logos-width: 40%;
 $technology-logos-padding: 1rem 2rem;
-$technology-logos-image-margin: 1rem;
+$technology-logos-image-padding: 1rem;
 $technology-logos-image-max-height: calc(max(10rem, min(20vh, 25vw)));
+$technology-logos-image-max-width: 50%;
 $technology-logos-image-opacity: 0.8;
-$technology-logos-ue-transform: translateY(-10%);
-$technology-logos-blender-transform: translateY(+10%);
+$technology-logos-ue-transform: translateY(-5%);
+$technology-logos-blender-transform: translateY(+5%);
 
 $technology-description-color: #cccccc;
+$technology-description-padding: 1rem 0;
 $technology-description-font-size: 1.25rem;
-$technology-description-min-width: 25rem;
+$technology-description-min-width: 60%;
 
 $developers-padding: 0 4rem;
 $developers-margin: 1rem auto;
@@ -51,14 +53,15 @@ $developers-color: #5f8bd1;
     
         &__logos {
             display: flex;
-            flex: 0 0 $technology-logos-width;
+            flex: 1 1 $technology-logos-width;
+            flex-wrap: wrap;
             padding: $technology-logos-padding;
             justify-content: center;
             align-items: center;
     
             &-ue, &-blender {
                 width: fit-content;
-                margin: $technology-logos-image-margin;
+                padding: $technology-logos-image-padding;
                 max-height: $technology-logos-image-max-height;
                 opacity: $technology-logos-image-opacity;
             }
@@ -78,7 +81,8 @@ $developers-color: #5f8bd1;
             justify-content: center;
             text-align: justify;
             color: $technology-description-color;
-            flex: 1 0 $technology-description-min-width;
+            padding: $technology-description-padding;
+            flex: 20 1 $technology-description-min-width;
             font-size: $technology-description-font-size;
         }
     }

@@ -1,5 +1,5 @@
 $banner-title-font-family: 'Grind', Arial, Helvetica, sans-serif;
-$banner-title-font-size: 8vh;
+$banner-title-font-size: calc(min(8vh, 12vw));
 $banner-title-font-weight: 500;
 $banner-title-font-color-top: #ffffff;
 $banner-title-font-color-bottom: #b4b6d2;
@@ -10,7 +10,7 @@ $banner-title-animation-offset: 5%;
 
 $banner-download-font-color: #ffffff;
 $banner-download-font-weight: 600;
-$banner-download-font-size: 4vh;
+$banner-download-font-size: calc(min(4vh, 8vw));
 $banner-download-padding: 1vh 4vh;
 $banner-download-background: rgba($color: #111111, $alpha: 0.75);
 $banner-download-background-hover: rgba($color: #111111, $alpha: 0.9);
