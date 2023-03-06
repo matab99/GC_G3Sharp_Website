@@ -10,16 +10,15 @@ $authors-title-padding: 2rem;
 $authors-title-border-radius: 1rem;
 
 $technology-logos-width: 40%;
-$technology-logos-padding: 1rem 2rem;
 $technology-logos-image-padding: 1rem;
-$technology-logos-image-max-height: calc(max(10rem, min(20vh, 25vw)));
-$technology-logos-image-max-width: 50%;
+$technology-logos-image-max-height: max(10rem, 20vh);
+$technology-logos-image-max-width: 80vw;
 $technology-logos-image-opacity: 0.8;
 $technology-logos-ue-transform: translateY(-5%);
 $technology-logos-blender-transform: translateY(+5%);
 
 $technology-description-color: #cccccc;
-$technology-description-padding: 1rem 0;
+$technology-description-padding: 1rem;
 $technology-description-font-size: 1.25rem;
 $technology-description-min-width: 60%;
 
@@ -53,16 +52,16 @@ $developers-color: #5f8bd1;
     
         &__logos {
             display: flex;
-            flex: 1 1 $technology-logos-width;
+            flex: 1 0 40%;
             flex-wrap: wrap;
-            padding: $technology-logos-padding;
             justify-content: center;
             align-items: center;
     
             &-ue, &-blender {
-                width: fit-content;
+                object-fit: contain;
                 padding: $technology-logos-image-padding;
                 max-height: $technology-logos-image-max-height;
+                max-width: $technology-logos-image-max-width;
                 opacity: $technology-logos-image-opacity;
             }
     
@@ -82,7 +81,7 @@ $developers-color: #5f8bd1;
             text-align: justify;
             color: $technology-description-color;
             padding: $technology-description-padding;
-            flex: 20 1 $technology-description-min-width;
+            flex: 1 0 $technology-description-min-width;
             font-size: $technology-description-font-size;
         }
     }
@@ -93,6 +92,7 @@ $developers-color: #5f8bd1;
         margin: $developers-margin;
         flex-wrap: wrap;
         justify-content: center;
+        max-width: max-content;
     
         &__name {
             flex: 0 0 auto;
