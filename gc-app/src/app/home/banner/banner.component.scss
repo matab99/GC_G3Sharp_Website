@@ -1,3 +1,4 @@
+$banner-title-font-family: 'Grind', Arial, Helvetica, sans-serif;
 $banner-title-font-size: 8vh;
 $banner-title-font-weight: 500;
 $banner-title-font-color-top: #ffffff;
@@ -22,7 +23,7 @@ $banner-download-clip-path: polygon(calc(100% - 2vh) 0, 100% 2vh, 100% 100%, 2vh
     display: block;
     height: 100vh;
     box-shadow: 1vw -2vw 2vw black inset, -1vw 2vw 2vw black inset;
-    background-image: url('/assets/img/banner_bg4.png');
+    background-image: url('/assets/img/banners/banner_bg4.png');
     background-size: cover;
     background-position: 100%;
     background-repeat: no-repeat;
@@ -30,6 +31,7 @@ $banner-download-clip-path: polygon(calc(100% - 2vh) 0, 100% 2vh, 100% 100%, 2vh
     &__title {
         position: absolute;
         margin: 0;
+        font-family: $banner-title-font-family;
         font-size: $banner-title-font-size;
         font-weight: $banner-title-font-weight;
         animation: title-animation ease-in-out $banner-title-animation-time infinite;
@@ -67,6 +69,7 @@ $banner-download-clip-path: polygon(calc(100% - 2vh) 0, 100% 2vh, 100% 100%, 2vh
         bottom: 25%;
         transform: translateX(-50%) translateY(+50%);
         border: 0;
+        text-align: center;
         cursor: pointer;
 
         padding: $banner-download-padding;

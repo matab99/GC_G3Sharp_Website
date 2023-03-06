@@ -5,6 +5,7 @@ $navbar-toggler-color: #ffffff;
 $navbar-toggler-hover-scale: 110%;
 $navbar-toggler-transition: transform 0.2s;
 
+$navbar-brand-font-family: 'Grind', Arial, Helvetica, sans-serif;
 $navbar-brand-font-size: 1.5rem;
 $navbar-brand-font-weight: 500;
 $navbar-brand-font-color-top: #ffffff;
@@ -12,7 +13,7 @@ $navbar-brand-font-color-bottom: #b4b6d2;
 $navbar-brand-margin: 0 4rem 0 2rem;
 $navbar-brand-padding: 0.5rem 0;
 
-$navbar-collapse-margin: 0.25rem 0 0.25rem 1rem;
+$navbar-collapse-margin: 0.25rem 0 0.25rem 2rem;
 
 $navbar-nav-link-font-size: 1.25rem;
 $navbar-nav-link-margin: 0 1.5rem 0 0;
@@ -35,9 +36,11 @@ $navbar-nav-link-hover-color: #a6c5f7;
         padding: 0;
         margin: $navbar-brand-margin;
         padding: $navbar-brand-padding;
+        cursor: pointer;
 
         &__title {
             margin: 0;
+            font-family: $navbar-brand-font-family;
             font-size: $navbar-brand-font-size;
             font-weight: $navbar-brand-font-weight;
         
@@ -71,6 +74,7 @@ $navbar-nav-link-hover-color: #a6c5f7;
             border-bottom: 1px solid transparent;
             border-top: 1px solid transparent;
             transition: border-bottom 0.5s, color 0.5s;
+            cursor: pointer;
 
             &:hover {
                 color: $navbar-nav-link-hover-color;

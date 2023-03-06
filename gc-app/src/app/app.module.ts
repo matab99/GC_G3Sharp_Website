@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from  'ng-gallery/lightbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,8 +28,13 @@ import { AuthorsComponent } from './home/authors/authors.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    MdbCollapseModule
+    MdbCollapseModule,
+    GalleryModule,
+    LightboxModule.withConfig({
+      panelClass: 'fullscreen'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

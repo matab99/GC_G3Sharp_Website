@@ -1,1 +1,13 @@
-<p>screenshots works!</p>
+<div class="screenshots">
+  <p class="screenshots__title">Zrzuty ekranu</p>
+  <div class="screenshots__gallery" gallerize="screenshots">
+    <div class="screenshots__container" *ngFor="let sc of screenshots">
+      <img
+        class="screenshots__image"
+        [src]="sc.thumbnail ? sc.thumbnail : sc.src"
+        [attr.imageSrc]="sc.src"
+        [attr.thumbSrc]="sc.thumbnail ? sc.thumbnail : sc.src"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+$footer-text-color: #333333;
+$footer-text-size: 0.75rem;
+$footer-margin: 2rem 0;
+
+$footer-company-color: #3f3f3f;
+$footer-company-margin: 1rem 0 0.25rem 0;
+$footer-company-name-margin: 0 0 0 1rem;
+
+$footer-author-color: #3f3f3f;
+$footer-author-margin: 0.25rem 0 1rem 0;
+$footer-author-name-margin: 0 0 0 1rem;
+
+.footer {
+    color: $footer-text-color;
+    font-size: $footer-text-size;
+    margin: $footer-margin;
+    text-align: center;
+
+    &__company {
+        margin: $footer-company-margin;
+
+        &-name {
+            margin: $footer-company-name-margin;
+            color: $footer-company-color;
+        }
+    }
+
+    &__author {
+        margin: $footer-author-margin;
+
+        &-name {
+            margin: $footer-author-name-margin;
+            color: $footer-author-color;
+        }
+    }
+}

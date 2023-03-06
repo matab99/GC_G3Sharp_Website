@@ -1,0 +1,117 @@
+$screenshots-width: 80%;
+$screenshots-margin: 12rem auto;
+
+$screenshots-gallery-margin: 4rem 0;
+
+$screenshots-title-color: #ffffff;
+$screenshots-title-background-color: #111111;
+$screenshots-title-box-shadow: inset 0 0 2rem 1rem #000000;
+$screenshots-title-font-size: 2rem;
+$screenshots-title-margin: 0;
+$screenshots-title-padding: 2rem;
+$screenshots-title-border-radius: 1rem;
+
+$screenshots-gallery-min-cols: 1;
+$screenshots-gallery-max-cols: 2;
+$screenshots-gallery-min-cols-width: 500px;
+$screenshots-gallery-row-gap: calc(max(2vh, 2vw));
+$screenshots-gallery-col-gap: calc(max(2vh, 2vw));
+
+$screenshots-image-underline-height: 1px;
+$screenshots-image-underline-color: #7eadf7;
+$screenshots-image-underline-height-hover: 4px;
+$screenshots-image-underline-color-hover: #a6c5f7;
+$screenshots-image-underline-transition: height 0.25s, background-color 0.25s;
+
+// https://stackoverflow.com/questions/52417889/setting-minimum-and-maximum-number-of-columns-using-css-grid
+@mixin grid-min-max-cols(
+  $min-cols,
+  $max-cols,
+  $cols-min-width,
+  $grid-row-gap: 0px,
+  $grid-column-gap: 0px
+) {
+//   --min-cols: #{$min-cols};
+//   --max-cols: #{$max-cols};
+//   --cols-min-width: #{$cols-min-width};
+//   --grid-row-gap: #{$grid-row-gap};
+//   --grid-column-gap: #{$grid-column-gap};
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      min(
+        (
+          calc(100% / #{$min-cols} - #{$grid-column-gap} *
+            (#{$min-cols} - 1) / #{$min-cols})
+        ),
+        max(
+          #{$cols-min-width},
+          (
+            calc(100% / #{$max-cols} - #{$grid-column-gap} *
+              (#{$max-cols} - 1) / #{$max-cols})
+          )
+        )
+      ),
+      1fr
+    )
+  );
+  gap: $grid-row-gap $grid-column-gap;
+}
+
+.screenshots {
+  width: $screenshots-width;
+  margin: $screenshots-margin;
+
+  &__title {
+    text-align: center;
+    color: $screenshots-title-color;
+    font-size: $screenshots-title-font-size;
+    background-color: $screenshots-title-background-color;
+    box-shadow: $screenshots-title-box-shadow;
+    margin: $screenshots-title-margin;
+    padding: $screenshots-title-padding;
+    border-radius: $screenshots-title-border-radius;
+  }
+
+  &__gallery {
+    @include grid-min-max-cols(
+        $screenshots-gallery-min-cols,
+        $screenshots-gallery-max-cols,
+        $screenshots-gallery-min-cols-width,
+        $screenshots-gallery-row-gap,
+        $screenshots-gallery-col-gap);
+
+    margin: $screenshots-gallery-margin;
+  }
+
+  &__container {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: $screenshots-image-underline-height;
+      background-color: $screenshots-image-underline-color;
+      pointer-events: none;
+      transition: $screenshots-image-underline-transition;
+    }
+
+    &:hover::after {
+      height: $screenshots-image-underline-height-hover;
+      background-color: $screenshots-image-underline-color-hover;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    margin: auto auto;
+    object-fit: contain;
+  }
+}
