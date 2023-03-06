@@ -1,5 +1,13 @@
-$technology-width: 80%;
-$technology-margin: 0 auto;
+$authors-width: 80%;
+$authors-margin: 0 auto;
+
+$authors-title-color: #ffffff;
+$authors-title-background-color: #111111;
+$authors-title-box-shadow: inset 0 0 2rem 1rem #000000;
+$authors-title-font-size: 2rem;
+$authors-title-margin: 2rem 0;
+$authors-title-padding: 2rem;
+$authors-title-border-radius: 1rem;
 
 $technology-logos-width: 40%;
 $technology-logos-padding: 1rem 2rem;
@@ -13,74 +21,86 @@ $technology-description-color: #cccccc;
 $technology-description-font-size: 1.25rem;
 $technology-description-min-width: 25rem;
 
-$authors-width: 80%;
-$authors-padding: 0 4rem;
-$authors-margin: 1rem auto;
+$developers-padding: 0 4rem;
+$developers-margin: 1rem auto;
 
-$authors-name-font-size: 1.5rem;
-$authors-name-font-weight: 600;
-$authors-name-padding: 1rem 2rem;
-$authors-color: #5f8bd1;
-
-.technology {
-    display: flex;
-    flex-wrap: wrap;
-    width: $technology-width;
-    margin: $technology-margin;
-    justify-content: center;
-
-    &__logos {
-        display: flex;
-        flex: 0 0 $technology-logos-width;
-        padding: $technology-logos-padding;
-        justify-content: center;
-        align-items: center;
-
-        &-ue, &-blender {
-            width: fit-content;
-            margin: $technology-logos-image-margin;
-            max-height: $technology-logos-image-max-height;
-            opacity: $technology-logos-image-opacity;
-        }
-
-        &-ue {
-            transform: $technology-logos-ue-transform;
-        }
-
-        &-blender {
-            transform: $technology-logos-blender-transform;
-        }
-    }
-
-    &__description {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: justify;
-        color: $technology-description-color;
-        flex: 1 0 $technology-description-min-width;
-        font-size: $technology-description-font-size;
-    }
-}
+$developers-name-font-size: 1.5rem;
+$developers-name-font-weight: 600;
+$developers-name-padding: 1rem 2rem;
+$developers-color: #5f8bd1;
 
 .authors {
-    display: flex;
     width: $authors-width;
-    padding: $authors-padding;
     margin: $authors-margin;
-    flex-wrap: wrap;
-    justify-content: center;
 
-    &__name {
-        flex: 0 0 auto;
-        color: $authors-color;
-        font-size: $authors-name-font-size;
-        font-weight: $authors-name-font-weight;
-        padding: $authors-name-padding;
+    &__title {
         text-align: center;
+        color: $authors-title-color;
+        font-size: $authors-title-font-size;
+        background-color: $authors-title-background-color;
+        box-shadow: $authors-title-box-shadow;
+        margin: $authors-title-margin;
+        padding: $authors-title-padding;
+        border-radius: $authors-title-border-radius;
     }
 
-    &__separator {
-        flex: 0 0 100%;
+    .technology {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        &__logos {
+            display: flex;
+            flex: 0 0 $technology-logos-width;
+            padding: $technology-logos-padding;
+            justify-content: center;
+            align-items: center;
+    
+            &-ue, &-blender {
+                width: fit-content;
+                margin: $technology-logos-image-margin;
+                max-height: $technology-logos-image-max-height;
+                opacity: $technology-logos-image-opacity;
+            }
+    
+            &-ue {
+                transform: $technology-logos-ue-transform;
+            }
+    
+            &-blender {
+                transform: $technology-logos-blender-transform;
+            }
+        }
+    
+        &__description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: justify;
+            color: $technology-description-color;
+            flex: 1 0 $technology-description-min-width;
+            font-size: $technology-description-font-size;
+        }
+    }
+    
+    .developers {
+        display: flex;
+        padding: $developers-padding;
+        margin: $developers-margin;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        &__name {
+            flex: 0 0 auto;
+            color: $developers-color;
+            font-size: $developers-name-font-size;
+            font-weight: $developers-name-font-weight;
+            padding: $developers-name-padding;
+            text-align: center;
+        }
+    
+        &__separator {
+            flex: 0 0 100%;
+        }
     }
 }

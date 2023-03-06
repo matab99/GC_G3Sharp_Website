@@ -5,6 +5,7 @@ $navbar-toggler-color: #ffffff;
 $navbar-toggler-hover-scale: 110%;
 $navbar-toggler-transition: transform 0.2s;
 
+$navbar-brand-font-family: 'Grind', Arial, Helvetica, sans-serif;
 $navbar-brand-font-size: 1.5rem;
 $navbar-brand-font-weight: 500;
 $navbar-brand-font-color-top: #ffffff;
@@ -39,6 +40,7 @@ $navbar-nav-link-hover-color: #a6c5f7;
 
         &__title {
             margin: 0;
+            font-family: $navbar-brand-font-family;
             font-size: $navbar-brand-font-size;
             font-weight: $navbar-brand-font-weight;
         
