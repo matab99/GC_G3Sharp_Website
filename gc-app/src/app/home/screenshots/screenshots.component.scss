@@ -5,11 +5,11 @@ $screenshots-gallery-margin: 2rem 0;
 
 $screenshots-title-color: #ffffff;
 $screenshots-title-background-color: #111111;
-$screenshots-title-box-shadow: inset 0 0 2rem 1rem #000000;
+$screenshots-title-box-shadow: inset 0 0 3rem 1.5rem #000000, inset 0 0 1px 1px #000000;
 $screenshots-title-font-size: 2rem;
 $screenshots-title-margin: 0;
 $screenshots-title-padding: 2rem;
-$screenshots-title-border-radius: 1rem;
+$screenshots-title-border-radius: 100%;
 
 $screenshots-gallery-min-cols: 1;
 $screenshots-gallery-max-cols: 3;

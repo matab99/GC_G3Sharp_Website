@@ -3,24 +3,24 @@ $authors-margin: 0 auto;
 
 $authors-title-color: #ffffff;
 $authors-title-background-color: #111111;
-$authors-title-box-shadow: inset 0 0 2rem 1rem #000000;
+$authors-title-box-shadow: inset 0 0 3rem 1.5rem #000000, inset 0 0 1px 1px #000000;
 $authors-title-font-size: 2rem;
 $authors-title-margin: 0;
 $authors-title-padding: 2rem;
-$authors-title-border-radius: 1rem;
+$authors-title-border-radius: 100%;
 
 $technology-logos-width: 40%;
 $technology-logos-image-padding: 1rem;
 $technology-logos-image-max-height: max(10rem, 20vh);
 $technology-logos-image-max-width: 80vw;
 $technology-logos-image-opacity: 0.8;
-$technology-logos-ue-transform: translateY(-5%);
-$technology-logos-blender-transform: translateY(+5%);
+$technology-logos-ue-transform: translateY(-7.5%);
+$technology-logos-blender-transform: translateY(+7.5%);
 
+$technology-description-width: 60%;
 $technology-description-color: #cccccc;
 $technology-description-padding: 1rem;
 $technology-description-font-size: 1.25rem;
-$technology-description-min-width: 60%;
 
 $developers-padding: 0 4rem;
 $developers-margin: 1rem auto;
@@ -52,7 +52,7 @@ $developers-color: #5f8bd1;
     
         &__logos {
             display: flex;
-            flex: 1 0 40%;
+            flex: 1 0 $technology-logos-width;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
@@ -76,12 +76,11 @@ $developers-color: #5f8bd1;
     
         &__description {
             display: flex;
+            flex: 1 0 $technology-description-width;
             flex-direction: column;
             justify-content: center;
-            text-align: justify;
             color: $technology-description-color;
             padding: $technology-description-padding;
-            flex: 1 0 $technology-description-min-width;
             font-size: $technology-description-font-size;
         }
     }
