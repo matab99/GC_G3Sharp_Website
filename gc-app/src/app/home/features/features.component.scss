@@ -1,5 +1,6 @@
 $feature-width: 80%;
 $feature-margin: 4rem auto;
+$feature-margin-between: calc(min(12rem, max(4rem, 8vh)));
 $feature-padding: 2rem 0;
 
 $feature-overview-width: 40%;
@@ -19,6 +20,10 @@ $feature-description-color-even: #cccccc;
 $feature-description-margin: 1rem 10%;
 
 $feature-image-width: 60%;
+$feature-image-max-height: calc(max(20rem, 33vh));
+$feature-image-max-width: 80vw;
+
+$feature-environment-image-max-height: calc(max(24rem, 40vh));
 
 .feature {
     $this: &;
@@ -28,6 +33,10 @@ $feature-image-width: 60%;
     width: $feature-width;
     margin: $feature-margin;
     align-items: center;
+
+    & + #{&} {
+        margin-top: $feature-margin-between;
+    }
 
     &__overview {
         display: flex;
@@ -71,14 +80,14 @@ $feature-image-width: 60%;
         flex: 1 1 $feature-image-width;
         
         img {
-            max-height: calc(max(20rem, 40vh));
+            max-height: $feature-image-max-height;
             max-width: 80vw;
         }
     }
 
     &.environment {
         #{$this}__image img {
-            max-height: calc(max(24rem, 50vh));
+            max-height: $feature-environment-image-max-height;
         }
     }
 
