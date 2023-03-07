@@ -6,11 +6,11 @@ $navbar-toggler-hover-scale: 110%;
 $navbar-toggler-transition: transform 0.2s;
 
 $navbar-brand-font-family: 'Grind', Arial, Helvetica, sans-serif;
-$navbar-brand-font-size: 1.5rem;
+$navbar-brand-font-size: calc(min(1.5rem, 6vw));
 $navbar-brand-font-weight: 500;
 $navbar-brand-font-color-top: #ffffff;
 $navbar-brand-font-color-bottom: #b4b6d2;
-$navbar-brand-margin: 0 4rem 0 2rem;
+$navbar-brand-margin: 0 calc(min(4rem, 10vw)) 0 2rem;
 $navbar-brand-padding: 0.5rem 0;
 
 $navbar-collapse-margin: 0.25rem 0 0.25rem 2rem;

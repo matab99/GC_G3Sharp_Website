@@ -1,5 +1,5 @@
 $banner-title-font-family: 'Grind', Arial, Helvetica, sans-serif;
-$banner-title-font-size: 8vh;
+$banner-title-font-size: calc(min(8vh, 12vw));
 $banner-title-font-weight: 500;
 $banner-title-font-color-top: #ffffff;
 $banner-title-font-color-bottom: #b4b6d2;
@@ -10,13 +10,23 @@ $banner-title-animation-offset: 5%;
 
 $banner-download-font-color: #ffffff;
 $banner-download-font-weight: 600;
-$banner-download-font-size: 4vh;
-$banner-download-padding: 1vh 4vh;
+$banner-download-font-size: calc(min(4vh, 8vw));
+$banner-download-padding: 1vh 6vh;
 $banner-download-background: rgba($color: #111111, $alpha: 0.75);
 $banner-download-background-hover: rgba($color: #111111, $alpha: 0.9);
-$banner-download-border: 0.2rem solid rgba($color: #000000, $alpha: 0.25);
+$banner-download-border-width: 2px;
+$banner-download-border-style: solid;
+$banner-download-border-color: #aaaaaa #aaaaaa #aaaaaa #aaaaaa;
 $banner-download-transition: background-color 0.25s;
-$banner-download-clip-path: polygon(calc(100% - 2vh) 0, 100% 2vh, 100% 100%, 2vh 100%, 0 calc(100% - 2vh), 0 0);
+$banner-download-transition: background-color 0.25s;
+$banner-download-clip-path-offset: min(10vw, 3rem);
+$banner-download-clip-path: polygon(
+    calc(100% - #{$banner-download-clip-path-offset}) 0,
+    100% #{$banner-download-clip-path-offset},
+    100% 100%,
+    #{$banner-download-clip-path-offset} 100%,
+    0 calc(100% - #{$banner-download-clip-path-offset}),
+    0 0);
 
 .banner {
     position: relative;
@@ -71,7 +81,7 @@ $banner-download-clip-path: polygon(calc(100% - 2vh) 0, 100% 2vh, 100% 100%, 2vh
         border: 0;
         text-align: center;
         cursor: pointer;
-
+        
         padding: $banner-download-padding;
         font-size: $banner-download-font-size;
         font-weight: $banner-download-font-weight;
@@ -79,6 +89,9 @@ $banner-download-clip-path: polygon(calc(100% - 2vh) 0, 100% 2vh, 100% 100%, 2vh
         background-color: $banner-download-background;
         transition: $banner-download-transition;
         clip-path: $banner-download-clip-path;
+        border-width: $banner-download-border-width;
+        border-style: $banner-download-border-style;
+        border-color: $banner-download-border-color;
 
         &:hover {
             background-color: $banner-download-background-hover;
