@@ -10,8 +10,8 @@ export class BannerComponent {
   constructor(private renderer: Renderer2) {}
 
   download() {
-    const href = '/assets/img/banner_bg1.png';
-    const filename = 'banner_bg_downloaded.png';
+    const href = '/assets/game/garbage_collector_0.0.0.zip';
+    const filename = 'Garbage Collector.zip';
     const link = this.renderer.createElement('a') as HTMLElement;
     link.setAttribute('target', '_blank');
     link.setAttribute('href', href);

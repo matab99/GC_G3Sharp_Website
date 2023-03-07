@@ -19,7 +19,7 @@ $banner-download-border-style: solid;
 $banner-download-border-color: #aaaaaa #aaaaaa #aaaaaa #aaaaaa;
 $banner-download-transition: background-color 0.25s;
 $banner-download-transition: background-color 0.25s;
-$banner-download-clip-path-offset: min(10vw, 3rem);
+$banner-download-clip-path-offset: min(10vw, 3vh);
 $banner-download-clip-path: polygon(
     calc(100% - #{$banner-download-clip-path-offset}) 0,
     100% #{$banner-download-clip-path-offset},
