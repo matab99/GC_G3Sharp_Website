@@ -11,7 +11,7 @@ export class BannerComponent {
 
   download() {
     //const href = '/assets/game/garbage_collector_0.0.0.zip';
-    const href = 'https://garbagecollectorbin.blob.core.windows.net/game/garbage_collector_1.0.0.zip';
+    const href = 'https://garbagecollectorbin.blob.core.windows.net/game/Garbage Collector.zip';
     const filename = 'Garbage Collector.zip';
     const link = this.renderer.createElement('a') as HTMLElement;
     link.setAttribute('href', href);
