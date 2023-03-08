@@ -1,23 +1,29 @@
 $feature-width: 80%;
 $feature-margin: 4rem auto;
-$feature-margin-between: calc(min(12rem, max(4rem, 8vh)));
+$feature-margin-between: 6rem;
 $feature-padding: 2rem 0;
 
 $feature-overview-width: 40%;
 $feature-overview-padding: 2rem 0;
+$feature-overview-divisor-height: 1rem;
+$feature-overview-divisor-margin: 2rem 0;
 
 $feature-title-color: #b4b6d2;
-$feature-title-background-color: #111111;
-$feature-title-box-shadow: inset 0 0 3rem 1.5rem #000000, inset 0 0 1px 1px #000000;
+$feature-title-background: repeating-linear-gradient(
+    -45deg,
+    transparent 0 1rem,
+    #111111 1rem 2rem);
+$feature-title-font-weight: 600;
+$feature-title-font-letter-spacing: 0.1rem;
 $feature-title-font-size: 1.5rem;
-$feature-title-margin: 0;
-$feature-title-padding: 2rem 10%;
-$feature-title-border-radius: 4rem;
+$feature-title-margin: 2rem 0;
+$feature-title-padding: 1rem 10%;
 
 $feature-description-font-size: 1.25rem;
 $feature-description-color-odd: #a8a8a8;
 $feature-description-color-even: #cccccc;
 $feature-description-margin: 1rem 10%;
+$feature-description-font-weight: 500;
 
 $feature-image-width: 60%;
 $feature-image-max-height: calc(max(20rem, 33vh));
@@ -44,22 +50,32 @@ $feature-environment-image-max-height: calc(max(24rem, 40vh));
         justify-content: center;
         flex: 1 0 $feature-overview-width;
         padding: $feature-overview-padding;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: $feature-overview-divisor-height;
+            margin: $feature-overview-divisor-margin;
+            background: $feature-title-background;
+        }
     }
 
     &__title {
+        text-transform: uppercase;
         font-size: $feature-title-font-size;
-        font-weight: 600;
-        background-color: $feature-title-background-color;
+        letter-spacing: $feature-title-font-letter-spacing;
+        font-weight: $feature-title-font-weight;
+        background: $feature-title-background;
         color: $feature-title-color;
         margin: $feature-title-margin;
         padding: $feature-title-padding;
-        box-shadow: $feature-title-box-shadow;
-        border-radius: $feature-title-border-radius;
         text-align: center;
     }
 
     &__description {
         font-size: $feature-description-font-size;
+        font-weight: $feature-description-font-weight;
         margin: $feature-description-margin;
         
         &:nth-child(even) {

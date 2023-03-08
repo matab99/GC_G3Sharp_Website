@@ -2,12 +2,14 @@ $authors-width: 80%;
 $authors-margin: 0 auto;
 
 $authors-title-color: #ffffff;
-$authors-title-background-color: #111111;
-$authors-title-box-shadow: inset 0 0 3rem 1.5rem #000000, inset 0 0 1px 1px #000000;
+$authors-title-background: repeating-linear-gradient(
+    -45deg,
+    transparent 0 1rem,
+    #111111 1rem 2rem);
 $authors-title-font-size: 2rem;
-$authors-title-margin: 0;
-$authors-title-padding: 2rem;
-$authors-title-border-radius: 100%;
+$authors-title-margin: 4rem 0;
+$authors-title-padding: 1rem;
+$authors-title-border-radius: 0;
 
 $technology-logos-width: 40%;
 $technology-logos-image-padding: 1rem;
@@ -23,7 +25,7 @@ $technology-description-padding: 1rem;
 $technology-description-font-size: 1.25rem;
 
 $developers-padding: 0 4rem;
-$developers-margin: 1rem auto;
+$developers-margin: 2rem auto;
 
 $developers-name-font-size: 1.5rem;
 $developers-name-font-weight: 600;
@@ -38,8 +40,7 @@ $developers-color: #5f8bd1;
         text-align: center;
         color: $authors-title-color;
         font-size: $authors-title-font-size;
-        background-color: $authors-title-background-color;
-        box-shadow: $authors-title-box-shadow;
+        background: $authors-title-background;
         margin: $authors-title-margin;
         padding: $authors-title-padding;
         border-radius: $authors-title-border-radius;
