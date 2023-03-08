@@ -1,5 +1,6 @@
 $authors-width: 80%;
 $authors-margin: 0 auto;
+$authors-padding: 2rem 0;
 
 $authors-title-color: #ffffff;
 $authors-title-background: repeating-linear-gradient(
@@ -7,7 +8,7 @@ $authors-title-background: repeating-linear-gradient(
     transparent 0 1rem,
     #111111 1rem 2rem);
 $authors-title-font-size: 2rem;
-$authors-title-margin: 4rem 0;
+$authors-title-margin: 0 0 4rem 0;
 $authors-title-padding: 1rem;
 $authors-title-border-radius: 0;
 
@@ -35,6 +36,7 @@ $developers-color: #5f8bd1;
 .authors {
     width: $authors-width;
     margin: $authors-margin;
+    padding: $authors-padding;
 
     &__title {
         text-align: center;

@@ -1,5 +1,6 @@
 $screenshots-width: 80%;
-$screenshots-margin: 12rem auto;
+$screenshots-margin: 10rem auto;
+$screenshots-padding: 2rem 0;
 
 $screenshots-gallery-margin: 4rem 0;
 
@@ -9,7 +10,7 @@ $screenshots-title-background: repeating-linear-gradient(
   transparent 0 1rem,
   #111111 1rem 2rem);
 $screenshots-title-font-size: 2rem;
-$screenshots-title-margin: 2rem 0;
+$screenshots-title-margin: 0 2rem;
 $screenshots-title-padding: 1rem;
 
 $screenshots-gallery-min-cols: 1;
@@ -64,6 +65,7 @@ $screenshots-image-underline-transition: height 0.25s, background-color 0.25s;
 .screenshots {
   width: $screenshots-width;
   margin: $screenshots-margin;
+  padding: $screenshots-padding;
 
   &__title {
     text-align: center;
