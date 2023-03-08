@@ -7,8 +7,12 @@ $footer-company-margin: 1rem 0 0.25rem 0;
 $footer-company-name-margin: 0 0 0 1rem;
 
 $footer-author-color: #3f3f3f;
-$footer-author-margin: 0.25rem 0 1rem 0;
+$footer-author-margin: 0.25rem 0 0 0;
 $footer-author-name-margin: 0 0 0 1rem;
+
+$footer-nonprofit-color: #000000;
+$footer-nonprofit-font-size: 0.5rem;
+$footer-nonprofit-margin: 0;
 
 .footer {
     color: $footer-text-color;
@@ -32,5 +36,11 @@ $footer-author-name-margin: 0 0 0 1rem;
             margin: $footer-author-name-margin;
             color: $footer-author-color;
         }
+    }
+
+    &__nonprofit {
+        color: $footer-nonprofit-color;
+        font-size: $footer-nonprofit-font-size;
+        margin: $footer-nonprofit-margin;
     }
 }
