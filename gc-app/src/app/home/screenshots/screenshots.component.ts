@@ -13,7 +13,7 @@ export class ScreenshotsComponent {
 
   constructor(private gallery : Gallery, private lightbox: Lightbox) {
     this.screenshots = Array(6).fill(0).map((e, i) => ({
-      src: `/assets/img/screenshots/s${i + 1}.png`
+      src: `/assets/img/screenshots/sc${i + 1}.png`
     }));
 
     this.gallery.ref('screenshots').setConfig({
